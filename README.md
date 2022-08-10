@@ -1,4 +1,4 @@
-# list-of-domains
+# list.of.domains
 
 Domains for sale.
 
