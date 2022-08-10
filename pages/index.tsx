@@ -24,6 +24,32 @@ export default function Index() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.background}>
+        <div />
+      </div>
+      <div className={styles.content}>
+        <div className={styles.center}>
+          <h1>list.of.domains</h1>
+          <h2>domains for sale</h2>
+          <div>
+            {
+              listings.map((listing, i) =>
+                <Listing
+                  listing={listing}
+                  key={i}
+                />
+              )
+            }
+          </div>
+          <p><b>Questions?</b></p>
+          <a
+            href="mailto:list@of.domains?subject=Domain Inquiry"
+            className={styles.contactUs}
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
