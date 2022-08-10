@@ -21,6 +21,27 @@ export default function Listing(props: Props) {
 
   return (
     <div className={styles.container}>
+      <div
+        id={listing.domain.toLowerCase()}
+        className={styles.bookmark}
+      />
+      <div className={styles.details}>
+        <a
+          href={getBuyLink(listing)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {listing.domain}
+        </a>
+        <p>{listing.description}</p>
+      </div>
+      <a
+        href={getBuyLink(listing)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <AddShoppingCartIcon />Get Now
+      </a>
     </div>
   );
 }
