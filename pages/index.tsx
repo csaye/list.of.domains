@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Listing from '../components/Listing';
 import styles from '../styles/pages/Index.module.scss';
+import listingStyles from '../styles/components/Listing.module.scss';
 import { listings } from '../util/listings';
 
 export default function Index() {
@@ -19,7 +20,7 @@ export default function Index() {
     const listing = bookmark.parentElement;
     if (!listing) return;
     bookmark.scrollIntoView();
-    listing.className = `${styles.listing} ${styles.selected}`;
+    listing.className = `${listingStyles.container} ${listingStyles.selected}`;
   }, [router.query]);
 
   return (
